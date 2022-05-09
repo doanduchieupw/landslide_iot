@@ -1,0 +1,44 @@
+{
+    "name": "landslide",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "prettier": "lint-staged",
+        "start": "nodemon --inspect src/index.js",
+        "watch": "sass --watch src/resources/scss/app.scss src/public/css/app.css",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky install",
+        "pre-commit": "lint-staged"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/doanduchieupw/landslide_iot.git"
+    },
+    "author": "hieudoan",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/doanduchieupw/landslide_iot/issues"
+    },
+    "homepage": "https://github.com/doanduchieupw/landslide_iot#readme",
+    "lint-staged": {
+        "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+    },
+    "description": "",
+    "dependencies": {
+        "express": "^4.18.1",
+        "express-handlebars": "^6.0.5",
+        "method-override": "^3.0.0",
+        "mongoose": "^6.3.2",
+        "mongoose-slug-generator": "^1.0.4",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.16",
+        "sass": "^1.51.0"
+    },
+    "devDependencies": {
+        "husky": "^7.0.4",
+        "lint-staged": "^12.4.1",
+        "node-sass": "^7.0.1",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.6.2"
+    }
+}
